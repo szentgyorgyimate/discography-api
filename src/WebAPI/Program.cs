@@ -4,9 +4,9 @@ using WebAPI.Persistance;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddWebAPIServices(builder.Configuration);
-
-builder.Services.AddControllers();
+builder.Services
+    .AddWebAPIServices(builder.Configuration)
+    .AddControllers();
 
 var app = builder.Build();
 
